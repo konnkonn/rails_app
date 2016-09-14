@@ -1,0 +1,10 @@
+
+mysql:
+  command: mysqld --user=root --verbose
+  build: ./docker/mysql
+  volumes:
+    - ./docker/.volumes/mysql:/var/lib/mysql
+  ports:
+    - "3306:3306"
+  env_file: ./docker/.env
+
